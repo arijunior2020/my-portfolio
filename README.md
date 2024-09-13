@@ -42,7 +42,7 @@ Este projeto é um portfólio pessoal que apresenta meu histórico profissional,
 ### 5. **Contato**
    - Formulário para clientes entrarem em contato diretamente, com processamento de e-mail usando PHP.
 
-### 6. ** Estrutura do Projeto**
+### 6. **Estrutura do Projeto**
 ```
 Portfolio
 │
@@ -59,7 +59,7 @@ Portfolio
 ├── portfolio-details.html # Página de detalhes do portfólio
 └── README.md           # Documentação do projeto
 ```
-### 7. ** Licença**
+### 7. **Licença**
 
 
 Utilizei o template disponível no link a seguir para o desenvolvimento deste projeto: [iPortfolio](https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/) 
