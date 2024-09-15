@@ -26,40 +26,34 @@
 
     <!-- CSS para personalizar o Footer e remover o marcador -->
     <style>
-        /* Estilo para o rodapé fixo apenas nesta página */
-        .fixed-footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #f8f9fa;
-            padding: 10px 0;
-            text-align: center;
-            z-index: 999;
+        /* Para garantir que o body ocupe 100% da altura */
+        html, body {
+            height: 100%;
         }
-
-        /* Adicione margem inferior no conteúdo para evitar sobreposição pelo rodapé */
-        .main-content {
-            margin-bottom: 60px;
-            margin-left: 20% !important;
+        /* Garantir que o conteúdo principal ocupe o espaço disponível */
+        main {
+            flex-grow: 1;
         }
-
         /* Remover o marcador para o primeiro item */
         .no-marker {
             list-style-type: none;
             padding-left: 0;
         }
-
         /* Personalizar o tamanho dos badges */
         .badge-img {
-            width: 50px; /* Ajuste o tamanho conforme necessário */
+            width: 50px;
             height: auto;
             margin-right: 10px;
+        }
+
+        .margin-custom {
+            margin-left: 20%!important;
         }
     </style>
 
 </head>
 
-<body class="certification-page">
+<body class="d-flex flex-column">
 
 <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -100,9 +94,9 @@
     </nav>
 </header>
 
-<main class="main-content">
+<main class="flex-grow-1 margin-custom">
     <section id="certification-info">
-        <h1>Certificações Microsoft</h1>
+        <h1>Certificações AWS</h1>
         <p>Esta página contém as informações sobre as certificações AWS.</p>
 
         <!-- Exemplo com Badge e sem marcador no primeiro item -->
@@ -150,23 +144,35 @@
     </section>
 </main>
 
-<footer class="footer fixed-footer light-background">
+<footer id="footer" class="footer light-background mt-auto">
     <div class="container">
-        <div class="copyright text-center">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">Arimatéia Júnior</strong> <span>All Rights Reserved</span></p>
+        <div class="copyright text-center ">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfólio</strong> <span>All Rights Reserved</span></p>
         </div>
         <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Customizado por Arimatéia Júnior
         </div>
     </div>
 </footer>
 
-<!-- Vendor JS Files -->
-<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/aos/aos.js"></script>
-<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../assets/js/main.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
