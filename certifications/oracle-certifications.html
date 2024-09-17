@@ -26,29 +26,46 @@
 
     <!-- CSS para personalizar o Footer e remover o marcador -->
     <style>
-        /* Para garantir que o body ocupe 100% da altura */
-        html, body {
-            height: 100%;
-        }
-        /* Garantir que o conteúdo principal ocupe o espaço disponível */
-        main {
-            flex-grow: 1;
-        }
-        /* Remover o marcador para o primeiro item */
-        .no-marker {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        /* Personalizar o tamanho dos badges */
-        .badge-img {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
+/* Para garantir que o body ocupe 100% da altura */
+html, body {
+    height: 100%;
+}
 
-        .margin-custom {
-            margin-left: 5%!important;
-        }
+/* Garantir que o conteúdo principal ocupe o espaço disponível */
+main {
+    flex-grow: 1;
+    padding-left: 5%;  /* Defina um padding leve, sem usar margem extrema */
+    padding-right: 5%; /* Defina padding para evitar o corte nas bordas */
+    max-width: 100%;  /* Certifique-se de que o conteúdo ocupa 100% da largura disponível */
+}
+
+/* Ajuste responsivo para remover o padding em telas grandes */
+@media (min-width: 992px) {
+    main {
+        padding-left: 15%;  /* Para telas maiores, use um padding ajustado */
+        padding-right: 15%; /* Para criar uma boa margem nas laterais em telas largas */
+    }
+}
+
+/* Personalizar o tamanho dos badges */
+.badge-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Remover o marcador para o primeiro item */
+.no-marker {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Centralizar o footer no desktop */
+footer {
+    text-align: center;
+    margin-top: auto;
+}
+
     </style>
 
 </head>
