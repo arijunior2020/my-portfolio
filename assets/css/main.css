@@ -820,16 +820,16 @@ section,
   }
 }
 
-.portfolio .portfolio-content {
+.portfolio {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio .portfolio-content img {
+.portfolio img {
   transition: 0.3s;
 }
 
-.portfolio .portfolio-content .portfolio-info {
+.portfolio .portfolio-info {
   opacity: 0;
   position: absolute;
   inset: 0;
@@ -839,7 +839,7 @@ section,
   padding: 15px;
 }
 
-.portfolio .portfolio-content .portfolio-info h4 {
+.portfolio  .portfolio-info h4 {
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
@@ -848,7 +848,7 @@ section,
   background-color: var(--accent-color);
 }
 
-.portfolio .portfolio-content .portfolio-info p {
+.portfolio .portfolio-info p {
   position: absolute;
   bottom: 10px;
   text-align: center;
@@ -860,8 +860,8 @@ section,
   color: rgba(255, 255, 255, 0.8);
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
+.portfolio .portfolio-info .preview-link,
+.portfolio .portfolio-info .details-link {
   position: absolute;
   left: calc(50% - 40px);
   font-size: 26px;
@@ -871,22 +871,22 @@ section,
   line-height: 1.2;
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
+.portfolio  .portfolio-info .preview-link:hover,
+.portfolio  .portfolio-info .details-link:hover {
   color: var(--accent-color);
 }
 
-.portfolio .portfolio-content .portfolio-info .details-link {
+.portfolio  .portfolio-info .details-link {
   left: 50%;
   font-size: 34px;
   line-height: 0;
 }
 
-.portfolio .portfolio-content:hover .portfolio-info {
+.portfolio :hover .portfolio-info {
   opacity: 1;
 }
 
-.portfolio .portfolio-content:hover img {
+.portfolio :hover img {
   transform: scale(1.1);
 }
 
@@ -1272,4 +1272,59 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* Define um tamanho fixo e uniforme para os itens do portfólio */
+.portfolio-item {
+  height: 300px; /* ajuste conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Faz com que o conteúdo dentro do portfólio ocupe todo o espaço disponível */
+.portfolio-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ajusta as imagens para que preencham o container mantendo a proporção */
+.portfolio-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz com que a imagem preencha todo o espaço sem distorção */
+  transition: 0.3s; /* Mantém a transição suave que já existe no seu CSS */
+}
+
+/* Define um tamanho máximo para as imagens no carrossel */
+.portfolio-details-slider .swiper-slide img {
+  max-width: 100%; /* Limita a imagem ao tamanho do container */
+  max-height: 400px; /* Define uma altura máxima, ajuste conforme necessário */
+  width: auto; /* Mantém a proporção da largura */
+  height: auto; /* Mantém a proporção da altura */
+  margin: 0 auto; /* Centraliza a imagem dentro do slide */
+  display: block;
+}
+
+/* Ajusta o tamanho das imagens no carrossel */
+.portfolio-details-slider .swiper-slide img {
+  max-width: 100%; /* Limita a largura ao tamanho do container */
+  max-height: 500px; /* Define uma altura máxima */
+  width: auto; /* Mantém a proporção da largura */
+  height: auto; /* Mantém a proporção da altura */
+  object-fit: contain; /* Garante que a imagem se ajuste sem distorcer */
+  margin: 0 auto; /* Centraliza a imagem dentro do slide */
+  display: block;
+}
+
+/* Ajusta a largura do slider para que não ocupe muito espaço */
+.portfolio-details-slider {
+  width: 100%;
+  margin: 0 auto;
 }
